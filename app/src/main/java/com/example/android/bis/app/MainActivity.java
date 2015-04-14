@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,6 +17,25 @@ public class MainActivity extends ActionBarActivity {
       //  WebView webView;
         //webView = (WebView) findViewById(R.id.webView);
         //webView.loadUrl("http://iarc.ee.its.ac.id/");
+        ListView listView = (ListView) findViewById(R.id.listView);
+
+        // Defined Array values to show in ListView
+        String[] values = new String[] { "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
+                "Android Example List View","b","b","b","b","b","b","b","b","b","b","b","b",
+
+        };
+
+          ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+
+        // Assign adapter to ListView
+        listView.setAdapter(adapter);
 
 
     }
@@ -36,10 +57,14 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            setContentView(R.layout.coba);
 
 
+        }if (id == R.id.action_main) {
+            setContentView(R.layout.simple_list_item_1);
         }
 
+      
         return super.onOptionsItemSelected(item);
     }
 }

@@ -7,7 +7,7 @@
 
 <ImageView
 
-    android:src="@mipmap/splash"
+    android:src="@drawable/coba"
 
     android:layout_width="match_parent"
 
